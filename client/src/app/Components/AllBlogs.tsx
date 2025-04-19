@@ -3,7 +3,7 @@
 import React from "react";
 import BlogCard from "./BlogCard";
 
-const OurBlogs = () => {
+const AllBlogs = () => {
   const [selected, setSelected] = React.useState("Technical");
 
   const bgCss = (title: string) => {
@@ -15,7 +15,7 @@ const OurBlogs = () => {
   return (
     <div className="mt-5 md:p-10 text-black ">
       <h1 className="w-full pl-5 font-semibold text-5xl">
-        Our <span className="text-[#ff5757]">Blogs</span>
+        All <span className="text-[#ff5757]">Blogs</span>
       </h1>
       <p className="pl-5">// Our Categories</p>
       <div className="flex w-full mt-10 justify-center ">
@@ -67,4 +67,4 @@ const OurBlogs = () => {
   );
 };
 
-export default OurBlogs;
+export default AllBlogs;
