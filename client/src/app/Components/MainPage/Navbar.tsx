@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="mx-auto  px-4 bg-white shadow-[0_4px_20px_rgba(255,255,255,0.3)] sm:px-6 text-black lg:px-8 py-4 flex justify-between items-center">
+      <div className="mx-auto  px-4 bg-[#f0f0f0] shadow-[0_4px_20px_rgba(255,255,255,0.3)] sm:px-6 text-black lg:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -22,23 +22,23 @@ const Navbar = () => {
             height={40}
             priority
           />
-          <span className="font-bold text-black pl-2 text-xl md:text-4xl">
-            Curio <span className="text-[#FF5757]">World</span>
+          <span className="font-bold text-black pl-2 text-xl md:text-2xl">
+            Curio<span className="text-[#FF5757]">Volved</span>
           </span>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex  items-center gap-6">
+        <div className="hidden md:flex  items-center gap-13 lg:text-[2.35vmin]">
           <Link href="/about" className="hover:text-blue-600">
             About
           </Link>
-          <Link href="/blogs" className="hover:text-blue-600">
+          <Link href="/allblogs" className="hover:text-blue-600">
             Blogs
           </Link>
           <Link href="/login" className="hover:text-blue-600">
             Login
           </Link>
-          <Link href="/contribute">
+          <Link href="/cmslogin">
             <button className="bg-[#ff5757] text-white px-4 py-2  hover:bg-[#ff4242] transition cursor-pointer">
               Contribute
             </button>

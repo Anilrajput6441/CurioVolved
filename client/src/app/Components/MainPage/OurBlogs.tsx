@@ -13,12 +13,12 @@ const OurBlogs = () => {
     return "bg-[#F8F6F6] text-black";
   };
   return (
-    <div className="mt-5 md:p-10 text-black ">
-      <h1 className="w-full pl-5 font-semibold text-5xl">
+    <div className="mt-3 md:p-5 text-black ">
+      <h1 className="w-full pl-5 font-semibold text-6xl">
         Our <span className="text-[#ff5757]">Blogs</span>
       </h1>
-      <p className="pl-5">// Our Categories</p>
-      <div className="flex w-full mt-10 justify-center ">
+      <p className="pl-8 md:text-sm">// Our Categories</p>
+      <div className="flex w-full mt-4 justify-center ">
         <div className="flex w-[100%] md:w-[60%] pt-2 pb-2 border-1 rounded border-gray-300 justify-evenly items-center">
           <div
             className={`border-1 rounded border-gray-300  pt-2 pb-2 pl-4 pr-4 cursor-pointer transition-colors duration-500 ease-in-out ${bgCss(
@@ -62,6 +62,7 @@ const OurBlogs = () => {
           </div>
         </div>
       </div>
+      
       <BlogCard selected={selected} />
     </div>
   );

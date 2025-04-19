@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -12,20 +13,20 @@ const BlogCard: React.FC<BlogCardProps> = ({ selected }) => {
   const filteredData = blogsData.filter((blog) => blog.category === selected);
   const [visibleCount, setVisibleCount] = React.useState(5);
 
-  const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + 4); // show 4 more on each click
-  };
+  // const handleLoadMore = () => {
+  //   setVisibleCount((prev) => prev + 4); // show 4 more on each click
+  // };
 
   const visibleBlogs = filteredData.slice(0, visibleCount);
 
   return (
     <div>
-      <div className="flex gap-x-10  gap-y-5 flex-wrap justify-center mt-10  md:mt-20 p-5">
-        {visibleBlogs.map((blog) => (
+      <div className="flex gap-x-10  gap-y-5 flex-wrap justify-center mt-10  md:mt-5 p-5">
+        {visibleBlogs.slice(0,4).map((blog) => (
           <Link
-            href={`/blog/${blog.id}`}
+            href={`/blog/${blog.id}/${blog.title.replaceAll("/","_")}`}
             key={blog.id}
-            className=" md:w-[20%] cursor-pointer h-full p-3 border-1 border-gray-400 shadow-lg"
+            className=" md:w-[22%] cursor-pointer h-full p-3 border-1 border-gray-400 shadow-lg"
           >
             <Image
               src={blog.image}
@@ -34,7 +35,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ selected }) => {
               height={300}
               className=""
             />
-            <div className=" absolute bg-[#FF5757] rounded mt-2 pl-1 pr-1 text-white text-center">
+            <div className=" md:text-xs p-1 absolute bg-[#FF5757] rounded mt-2 pl-1 pr-1 text-white text-center">
               {blog.topic}
             </div>
             <h1 className="mt-10 text-lg font-extrabold h-15  overflow-hidden">
@@ -44,7 +45,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ selected }) => {
           </Link>
         ))}
       </div>
-      <div className="w-full text-center">
+      {/* <div className="w-full text-center">
         {visibleCount < filteredData.length && (
           <button
             onClick={handleLoadMore}
@@ -53,7 +54,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ selected }) => {
             Load More
           </button>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
