@@ -21,10 +21,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ selected }) => {
 
   return (
     <div>
-      <div className="flex gap-x-10  gap-y-5 flex-wrap justify-center mt-10  md:mt-5 p-5">
-        {visibleBlogs.slice(0,4).map((blog) => (
+      <div className="flex gap-x-10  gap-y-5 flex-wrap justify-center mt-4  md:mt-2 p-5">
+        {visibleBlogs.slice(0, 4).map((blog) => (
           <Link
-            href={`/blog/${blog.id}/${blog.title.replaceAll("/","_")}`}
+            href={`/blog/${blog.id}/${blog.title.replaceAll("/", "_")}`}
             key={blog.id}
             className=" md:w-[22%] cursor-pointer h-full p-3 border-1 border-gray-400 shadow-lg"
           >
