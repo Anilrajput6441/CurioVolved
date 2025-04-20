@@ -3,8 +3,8 @@ import Image from "next/image"; // Ensure the file './Image.tsx' exists in the s
 
 const Hero = () => {
   return (
-    <div className="w-full p-0 lg:p-10 pb-[40vmin] pt-[40vmin] md:pt-0 md:pb-0 md:h-[87vh] bg-[#3C3C3C]">
-      <div className="mt-[-5vmin] lg:mt-[-2.75vmin] flex flex-col gap-y-10 justify-center  items-center border-white h-full w-full">
+    <div className="w-full p-0 lg:p-10 pb-[40vmin] pt-[40vmin] md:pt-0 md:pb-0 lg:h-[100vh] bg-[#3C3C3C]">
+      <div className="mt-[-5vmin] lg:mt-[-3.75vmin] flex flex-col gap-y-10 justify-center  items-center border-white h-full w-full">
         <Image
           src="/Icons/blogger.png"
           alt="blog-logo"
@@ -12,7 +12,7 @@ const Hero = () => {
           height={110}
         />
         <div className="flex justify-center items-center gap-x-5">
-          <h1 className="text-5xl lg:text-[14vmin] font-sans font-bold text-white">
+          <h1 className="text-5xl lg:text-[17vmin] font-sans font-bold text-white">
             Curio<span className="text-[#ff5757]">Volved</span>
           </h1>
         </div>
