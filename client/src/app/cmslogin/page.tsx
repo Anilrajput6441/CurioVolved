@@ -1,7 +1,7 @@
 import React from 'react'
 import CMSHeader from '../Components/CMS/CMSHeader'
 import Footer from '../Components/MainPage/Footer'
-import CMSLoginForm from '../Components/CMS/CMSLoginSection/CMSLoginArea'
+import CMSDashboard from '../Components/CMS/CMSDashboard/CMSDashboard'
 const page = () => {
   return (
     <div>
@@ -10,7 +10,7 @@ const page = () => {
         </header>
         <main>
             <div className="bodyArea pt-3 pb-3 lg:pt-10 lg:pb-10">
-                <CMSLoginForm/>
+                <CMSDashboard/>
             </div>
         </main>
 
