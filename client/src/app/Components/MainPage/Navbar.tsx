@@ -28,15 +28,22 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex  items-center gap-13 lg:text-[2.35vmin]">
+        <div className="hidden md:flex  items-center gap-13 lg:text-[2.35vmin] xl:text-[2.15vmin]">
           <Link href="/about" className="hover:text-blue-600">
             About
           </Link>
           <Link href="/allblogs" className="hover:text-blue-600">
             Blogs
           </Link>
+
+          <Link href="/contact" className="hover:text-blue-600">
+            Contact
+          </Link>
           <Link href="/login" className="hover:text-blue-600">
             Login
+          </Link>
+          <Link href="/terms" className="hover:text-blue-600">
+            Terms
           </Link>
           <Link href="/cmslogin">
             <button className="bg-[#ff5757] text-white px-4 py-2  hover:bg-[#ff4242] transition cursor-pointer">
